@@ -38,7 +38,6 @@ export default defineComponent({
 
     axios.get('data/data.json').then(response => {
        jobs.push(...response.data);
-       console.log(jobs);
       });
 
     return {

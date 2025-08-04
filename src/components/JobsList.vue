@@ -1,5 +1,5 @@
 <template>
-  <div class="font-spartan">
+  <div>
     <JobFilterBar :activeFilters="activeFilters" @removeFilter="removeFilter" @removeAll="removeAll" :style="{ visibility: isVisible ? 'visible' : 'hidden' }" />
   
   <div class="jobList" :style="{ marginTop: isVisible ? '2%' : dynamicMarginTop }">
@@ -27,8 +27,6 @@
                 <span class="tag" v-for="tool in job.tools" :key="tool" @click="addToFilters(tool)">{{ tool }}</span>
             </div>
         </div>
-       
-       
     </div>
 
   </div>
@@ -62,10 +60,8 @@ export default defineComponent({
     };
 
     const dynamicMarginTop = computed(() => {
-      if (window.innerWidth < 480) {
-        return '80px'; // mobile
-      } else if (window.innerWidth < 768) {
-        return '80px'; // tablets
+      if (window.innerWidth < 768) {
+        return '80px'; // mobile & tablets
       } else if (window.innerWidth < 1024) {
         return '60px'; // small desktop
       } else {
@@ -86,8 +82,8 @@ export default defineComponent({
     }
 
     function removeAll() {
-      console.log('Removing all filters');
-        activeFilters.splice(0); console.log(activeFilters);
+        if (activeFilters.length === 0) return;
+        activeFilters.splice(0);
         filterJobsByKeywords(props.jobs, activeFilters);
     }
 
