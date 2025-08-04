@@ -62,7 +62,15 @@ export default defineComponent({
     };
 
     const dynamicMarginTop = computed(() => {
-      return window.innerWidth < 768 ? '20%' : '85px';
+      if (window.innerWidth < 480) {
+        return '20px'; // mobile
+      } else if (window.innerWidth < 768) {
+        return '80px'; // tablets
+      } else if (window.innerWidth < 1024) {
+        return '60px'; // small desktop
+      } else {
+        return '80px'; // large screens
+      }
     });
 
     function addToFilters(tag: string) {

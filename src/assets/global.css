@@ -32,19 +32,19 @@ header {
   display: flex;
   flex-wrap: wrap;
   padding: 2px 0px 2px 20px;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border-radius: 6px;
-  margin-top: -35px;
+  margin-top: -32px;
   position: relative;
   z-index: 2;
   margin-left: 11%;
   width: 76%;
   box-shadow: 0 8px 8px rgba(0,0,0,0.05);
+  align-items: center;
 }
 
 .clearBtn {
   position: absolute;
-  top: 20%;
   right: 20px;
   font-size: 0.9rem;
   font-weight: 700;
@@ -111,7 +111,6 @@ header {
 
 .jobInfo .jobTitle {
   margin: 0;
-  font-size: 1.2rem;
   font-weight: 700;
 }
 
@@ -132,7 +131,7 @@ header {
   padding: 0px 7px 0px 7px;
   border-radius: 2px;
   color:  hsl(180, 29%, 50%);
-  margin: 6px;
+  margin: 16px;
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -146,7 +145,7 @@ header {
   font-size: 16px;
   line-height: 16px;
   color: #fff;
-  padding: 6px 6px 0px 6px;
+  padding: 6px 6px 4px 6px;
   background-color:  hsl(180, 29%, 50%);
 }
 
@@ -170,9 +169,6 @@ header {
   color: #fff;
   background-color:  hsl(180, 29%, 50%);
 }
-
-
-
 
 .location {
   font-size: 0.85rem;
@@ -205,12 +201,29 @@ header {
 
 
 @media (min-width: 768px) and (max-width: 991px) { 
-  .jobList {
-    width: 100%;
-    margin-top: 4%;
+   .jobList {
+      width: 100%;
+      margin-top: 1%;
+      margin: 0;
   }
- }
 
+  .jobCard {
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 45px 25px 0px 25px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .filterBar {
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.04);
+}
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -236,7 +249,7 @@ header {
 
   .info {
     color:  hsl(180, 8%, 52%);
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     margin: 0;
   }
 
@@ -244,7 +257,7 @@ header {
     width: 90%;
     margin-left: 4%;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.04);
-}
+  }
 
  
 }
@@ -255,6 +268,12 @@ header {
   width: 80%;
   margin-left: 7%;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.04);
+}
+
+.filterTag {
+  font-size: 0.8rem;
+  margin: 10px;
+  padding: 0 0 0 7px;
 }
   
 .jobList {
@@ -298,7 +317,7 @@ header {
 
 .info {
   color:  hsl(180, 8%, 52%);
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   margin: 0;
 }
 
@@ -307,7 +326,7 @@ header {
   color:  hsl(180, 29%, 50%);
   padding: 4px 8px 3px 8px;
   border-radius: 5px;
-  font-size: 1.0rem;
+  font-size: 0.9rem;
   font-weight: 700;
   border: none;
   cursor: pointer;
