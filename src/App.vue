@@ -60,7 +60,6 @@ header {
   background-color: hsl(180, 29%, 50%);
 }
 header img {
-  /* width: 200%; */
   display: block;
 }
 
