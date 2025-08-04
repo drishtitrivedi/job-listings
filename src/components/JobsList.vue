@@ -63,7 +63,7 @@ export default defineComponent({
 
     const dynamicMarginTop = computed(() => {
       if (window.innerWidth < 480) {
-        return '20px'; // mobile
+        return '80px'; // mobile
       } else if (window.innerWidth < 768) {
         return '80px'; // tablets
       } else if (window.innerWidth < 1024) {
